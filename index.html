@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emloyee Input Form</title>
+  </head>
+
+  <body>
+    <h2>Enter Employee Details</h2>
+    <form>
+      <label for="FirstNname">First Name : </label>
+      <input type="text" id="FirstName" name="FirstName" />
+      <br />
+      <br />
+
+      <label for="LastNname">Last Name : </label>
+      <input type="text" id="LastName" name="LastName" />
+
+      <br /><br />
+
+      <label>Gender : </label>
+      <input type="radio" id="Male" name="Gender" value="Male" />
+      <label for="Male">Male</label>
+
+      <input type="radio" id="Female" name="Gender" value="Female" />
+      <label for="Male">Female</label>
+
+      <br /><br />
+
+      <label>Maritial Status : </label>
+      <input type="radio" id="Married" name="MaritialStatus" value="Married" />
+      <label for="Married">Male</label>
+
+      <input
+        type="radio"
+        id="Unmarried"
+        name="MaritialStatus"
+        value="Unmarried"
+      />
+      <label for="Unmarried">Unmarried</label>
+
+      <br /><br />
+
+      <label for="Spouse">Name of Spouse : </label>
+      <input type="text" id="Spouse" name="Spouse" />
+
+      <br /><br />
+
+      <label for="Details"> Other Details</label>
+      <textarea name="Details" id="Details"></textarea>
+
+      <br /><br />
+
+      <input type="checkbox" id="TnC" value="TermsAndConditions" />
+      <label for="Tnc">
+        I accept
+        <a href="https://groww.in/" target="_blank"> Terms and Conditions </a>
+      </label>
+
+      <br /><br />
+      <input type="button" value="Reset" />
+      <input type="button" value="Save" />
+    </form>
+  </body>
+</html>
