@@ -1,0 +1,16 @@
+form {
+  margin: 0 auto;
+  width: 500px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+h2 {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.form-element {
+  margin: 1em 0;
+}
