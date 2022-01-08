@@ -1,16 +1,88 @@
+body {
+  font-family: montserrat;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+label {
+  color: #444;
+}
+.container {
+  background-color: #e5f9f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 form {
-  margin: 0 auto;
-  width: 500px;
+  background-color: white;
   padding: 1em;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 1em;
+  width: 500px;
+  box-shadow: 0 0 1em gray;
 }
 
-h2 {
-  margin-top: 48px;
+.form-element h1 {
   text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid silver;
 }
 
+.form-element input[type="text"],
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+}
 .form-element {
-  margin: 1em 0;
+  position: relative;
+  margin: 2em 0;
+}
+
+.text-field label {
+  position: absolute;
+  color: gray;
+  top: 0;
+  padding: 0;
+  pointer-events: none;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.text-field {
+  border-bottom: 2px solid silver;
+}
+
+.form-element input[type="text"]:focus + label,
+.form-element textarea:focus + label,
+.form-element input[type="text"]:valid + label,
+.form-element textarea:valid + label {
+  color: #00d09b;
+  transform: translateY(-20px);
+  font-size: 0.8em;
+}
+
+.form-element input[type="radio"]:checked + label {
+  color: #00d09b;
+}
+
+.btn-flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  font-size: 1em;
+  font-weight: 600;
+  background-color: #00d09b;
+  color: white;
+  border: none;
+  padding: 0.5em 2.5em;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
