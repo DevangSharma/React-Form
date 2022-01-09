@@ -9,6 +9,7 @@ h1,
 label {
   color: #444;
 }
+
 .container {
   background-color: #e5f9f5;
   display: flex;
@@ -28,42 +29,71 @@ form {
 
 .form-element h1 {
   text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid silver;
+  margin-bottom: 10px;
 }
 
-.form-element input[type="text"],
+.text-field input,
+.text-field-error input,
 textarea {
   width: 100%;
   border: none;
   outline: none;
+  border-bottom: 1.6px solid silver;
 }
 .form-element {
   position: relative;
   margin: 2em 0;
 }
 
-.text-field label {
+.text-field label,
+.text-field-error label {
   position: absolute;
   color: gray;
-  top: 0;
+  top: -4px;
   padding: 0;
   pointer-events: none;
   font-size: 1em;
   transition: 0.3s;
 }
 
-.text-field {
-  border-bottom: 2px solid silver;
+.text-field input:focus + label,
+.text-field textarea:focus + label,
+.text-field input:valid + label,
+.text-field textarea:valid + label {
+  color: #00d09b;
+  transform: translateY(-1em);
+  background-color: white;
+  font-size: 0.8em;
 }
 
-.form-element input[type="text"]:focus + label,
-.form-element textarea:focus + label,
-.form-element input[type="text"]:valid + label,
-.form-element textarea:valid + label {
-  color: #00d09b;
-  transform: translateY(-20px);
+.text-field-error input:invalid + label,
+.text-field-error textarea:invalid + label {
+  color: #eb5a3c;
+  transform: translateY(-1em);
+  background-color: white;
   font-size: 0.8em;
+}
+
+.text-field input:focus,
+.text-field textarea:focus {
+  padding: 5px;
+  outline: 2px solid #00d09b;
+}
+
+.text-field-error input:focus + label,
+.text-field-error textarea:focus + label,
+.text-field-error input:valid + label,
+.text-field-error textarea:valid + label {
+  color: #eb5a3c;
+  transform: translateY(-1em);
+  background-color: white;
+  font-size: 0.8em;
+}
+
+.text-field-error input,
+.text-field-error textarea {
+  padding: 5px;
+  outline: 2px solid #eb5a3c;
 }
 
 .form-element input[type="radio"]:checked + label {
@@ -75,6 +105,13 @@ textarea {
   justify-content: space-around;
 }
 
+.error {
+  padding-top: 2px;
+  padding-left: 4px;
+  display: block;
+  color: #eb5a3c;
+  font-size: 0.8em;
+}
 .btn {
   font-size: 1em;
   font-weight: 600;
@@ -85,4 +122,8 @@ textarea {
   border-radius: 20px;
   letter-spacing: 1px;
   cursor: pointer;
+}
+
+#spouse-div {
+  display: none;
 }

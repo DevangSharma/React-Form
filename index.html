@@ -4,32 +4,35 @@
     <title>Emloyee Input Form</title>
     <link rel="stylesheet" href="index.css" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-
   </head>
 
   <body>
     <div class="container">
-        <form>
+        <form id="form" novalidate>
           <div class="form-element">
             <h1>Employee Details</h1>
           </div>
           <div class="form-element text-field">
             <input type="text" id="FirstName" name="FirstName" required/>
-            <label for="FirstNname">First Name : </label>
+            <label for="FirstNname">Firstname : </label>
+            <span class="error" id="fnameError"></span>
           </div>
 
           <div class="form-element text-field">
             <input type="text" id="LastName" name="LastName" required />
-            <label for="LastNname">Last Name : </label>
+            <label for="LastNname">Lastname : </label>
+            <span class="error" id="lnameError"></span>
           </div>
 
           <div class="form-element">
             <label>Gender : </label>
-            <input type="radio" id="Male" name="Gender" value="Male" />
+            <input type="radio" id="Male" name="Gender" value="Male" required/>
             <label for="Male">Male</label>
 
-            <input type="radio" id="Female" name="Gender" value="Female" />
+            <input type="radio" id="Female" name="Gender" value="Female" required/>
             <label for="Female">Female</label>
+            <span class="error" id="GenderError"></span>
+
           </div>
 
           <div class="form-element">
@@ -49,11 +52,15 @@
               value="Unmarried"
             />
             <label for="Unmarried">Unmarried</label>
+            <span class="error" id="StatusError"></span>
+
           </div>
 
-          <div class="form-element text-field">
+          <div class="form-element text-field" id="spouse-div">
             <input type="text" id="Spouse" name="Spouse"  required/>
             <label for="Spouse">Name of Spouse : </label>
+            <span class="error" id="SpouseError"></span>
+
           </div>
 
           <div class="form-element text-field">
@@ -69,6 +76,8 @@
                 Terms and Conditions
               </a>
             </label>
+            <span class="error" id="TncError"></span>
+
           </div>
 
           <div class="form-element btn-flex">
@@ -79,4 +88,7 @@
       </div>
     </div>
   </body>
+
+  <script src="index.js"></script>
+
 </html>
